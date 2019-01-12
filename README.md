@@ -7,3 +7,5 @@ sistema estilo wiki para registrar procedimentos, problemas e respectivias solu�
 - exibe relatórios sobre tags com mais artigos associados, artigos mais acessados, usuários mais ativos
 - sistema de autenticação
 - auditoria sobre os registros
+
+## Tecnologia
