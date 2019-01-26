@@ -1,0 +1,10 @@
+{
+  "presets": ["env"],
+  "plugins": [
+    ["babel-plugin-root-import", { "rootPathSuffix": "src" }],
+    ["transform-runtime", { "polifill": false, "regenerator": true }]
+  ],
+  "env": {
+    "production": { "plugins": [["babel-plugin-root-import", { "rootPathSuffix": "src" }]] }
+  }
+}
