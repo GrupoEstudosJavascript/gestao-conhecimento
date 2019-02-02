@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import User from '~/models/userModel';
+import { UserController, ArticleController } from '~/controllers';
 
 const router = Router();
 
@@ -11,10 +11,13 @@ router.get('/info', (req, res) => {
 });
 
 // -=-=-=-=-= ROTAS DE USUARIOS -=-=-=-=
-router.get('/user', async (req, res) => {
-  await User.find({}, (err, users) => {
-    res.json(users);
-  });
-});
+router.get('/user', UserController.listAll);
+router.post('/user', UserController.create);
+
+// -=-=-=-=-= ROTAS DE ARTIGOS -=-=-=-=-=
+router.post('/article', ArticleController.create);
+router.get('/article', ArticleController.listAll);
+router.get('/article/tags', ArticleController.listTags);
+router.get('/article/articlefortag/:tag', ArticleController.listArticleForTag);
 
 export default router;
