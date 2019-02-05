@@ -1,4 +1,4 @@
-import UserModel from '~/models/UserModel';
+import UserModel from '~/models/userModel';
 
 class UserController {
   async create(req, res) {

@@ -1,4 +1,4 @@
-import Article from '~/models/ArticleModel';
+import Article from '~/models/articleModel';
 
 class ArticleController {
   async create(req, res) {
