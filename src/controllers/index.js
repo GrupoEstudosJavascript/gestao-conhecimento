@@ -1,4 +1,5 @@
-import UserController from './UserController';
-import ArticleController from './ArticleController';
+import UserController from './UserController'
+import ArticleController from './ArticleController'
+import SessionController from './SessionController'
 
-export { UserController, ArticleController };
+export { UserController, ArticleController, SessionController }
