@@ -1,10 +1,6 @@
 import { Router } from 'express'
-import {
-  UserController,
-  ArticleController,
-  SessionController
-} from '~/controllers'
-
+import { UserController, ArticleController, SessionController } from '~/controllers'
+import authMiddleware from './middlewares/auth'
 const router = Router()
 
 router.get('/info', (req, res) => {
@@ -15,7 +11,7 @@ router.get('/info', (req, res) => {
 })
 
 // -=-=-=-=-= ROTAS DE USUARIOS -=-=-=-=
-router.get('/user', UserController.listAll)
+router.get('/user', authMiddleware, UserController.listAll)
 router.post('/user', UserController.create)
 router.post('/user/login', SessionController.authenticate)
 
